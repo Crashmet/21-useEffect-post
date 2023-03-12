@@ -9,6 +9,20 @@ function Posts() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     try {
+  //       const res = await fetch(API_URL);
+  //       const posts = await res.json();
+  //       setPosts(posts);
+  //     } catch (error) {
+  //       setError(error.message);
+  //     }
+  //     setIsLoading(false);
+  //   }
+  //   fetchData();
+  // });
+
   useEffect(() => {
     fetch(API_URL)
       .then((response) => response.json())
